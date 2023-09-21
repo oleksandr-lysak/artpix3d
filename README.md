@@ -1,4 +1,11 @@
-# test task
+# Test task
+
+1. php artisan migrate
+2. php artisan db:seed --class=EmployeesTableSeeder
+3. php artisan db:seed --class=MachinesTableSeeder
+4. php artisan db:seed --class=WorkHistorySeeder
+
+
 GET http://127.0.0.1:8000/employees - Получить список работников
 
 GET http://127.0.0.1:8000/machines - Получить список станков
