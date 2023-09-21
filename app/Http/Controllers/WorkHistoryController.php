@@ -9,17 +9,19 @@ use Illuminate\Http\Request;
 
 class WorkHistoryController extends Controller
 {
-    public function assignMachine(Request $request)
+    public function assignMachine($employeeId, $machineId)
     {
-        $employeeId = $request->input('employee_id');
-        $machineId = $request->input('machine_id');
-
         $existingAssignment = WorkHistory::where('machine_id', $machineId)
             ->whereNull('end_date')
             ->first();
 
         if ($existingAssignment) {
-            return response()->json(['success' => false, 'message' => 'This machine is busy.'], 400);
+            return response()->json([
+                'success' => false,
+                'error' => [
+                    'message' => 'The employee was not found'
+                    ]
+                ], 400);
         }
 
         $workHistory = new WorkHistory();
@@ -31,11 +33,8 @@ class WorkHistoryController extends Controller
         return response()->json(['success' => true, 'message' => 'The machine is assigned to the employee.'], 201);
     }
 
-    public function unassignMachine(Request $request)
+    public function unassignMachine($employeeId, $machineId)
     {
-        $employeeId = $request->input('employee_id');
-        $machineId = $request->input('machine_id');
-
         $workHistory = WorkHistory::where('employee_id', $employeeId)
             ->where('machine_id', $machineId)
             ->whereNull('end_date')

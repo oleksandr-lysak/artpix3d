@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Machine;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 
 class MachinesTableSeeder extends Seeder

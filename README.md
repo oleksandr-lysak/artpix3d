@@ -1,26 +1,10 @@
-# Lumen PHP Framework
+# test task
+GET http://127.0.0.1:8000/employees - Получить список работников
+GET http://127.0.0.1:8000/machines - Получить список станков
+POST http://127.0.0.1:8000/assign/{employeeId}/{machineId} - Сказать что такой-то работник сейчас начал работать за таким-то станком.
+POST http://127.0.0.1:8000/unassign/{employeeId}/{machineId} - Сказать что такой-то работник сейчас закончил работать за таким-то станком.
+GET http://127.0.0.1:8000/employee/info/{employeeId} - Получить актуальную информацию по работнику. Т.е. на каких станках он сейчас работает.
+GET http://127.0.0.1:8000/machine/info/{machineId} - Получить актуальную информацию по станку. Т.е. какой работник сейчас за ним работает.
+GET http://127.0.0.1:8000/employee/history/{employeeId} - Получить историю по работнику. Когда работник начинал и заканчивал работать и на каком станке. Реализовать пагинацию. 
+GET http://127.0.0.1:8000/machine/history/{machineId} - Получить историю по станку. Когда на станке начинал и заканчивал работать и какой работник.
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
-
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
-
-> **Note:** In the years since releasing Lumen, PHP has made a variety of wonderful performance improvements. For this reason, along with the availability of [Laravel Octane](https://laravel.com/docs/octane), we no longer recommend that you begin new projects with Lumen. Instead, we recommend always beginning new projects with [Laravel](https://laravel.com).
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

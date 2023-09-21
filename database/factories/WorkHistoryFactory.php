@@ -45,28 +45,3 @@ class WorkHistoryFactory extends Factory
         ];
     }
 }
-
-
-
-// use App\Models\WorkHistory;
-// use Illuminate\Database\Eloquent\Factories\Factory;
-// use Faker\Generator as Faker;
-// use Illuminate\Support\Carbon;
-
-// $factory->define(WorkHistory::class, function (Faker $faker) {
-//     $availableEmployees = WorkHistory::pluck('employee_id')->toArray();
-//     $availableMachines = WorkHistory::pluck('machine_id')->toArray();
-
-//     $startPeriod = Carbon::now()->subMonth();
-//     $endPeriod = Carbon::now();
-
-//     $startDate = $faker->dateTimeBetween($startPeriod, $endPeriod);
-//     $endDate = $startDate->copy()->addHours(2);
-
-//     return [
-//         'employee_id' => $this->faker->unique()->randomElement($availableEmployees),
-//        'machine_id' => $this->faker->unique()->randomElement($availableMachines),
-//         'start_date' => $startDate,
-//         'end_date' => $endDate,
-//     ];
-// });

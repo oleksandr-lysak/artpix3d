@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmployeeController;
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
@@ -21,10 +20,10 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->get('employees',  ['uses' => 'EmployeeController@index']);
+$router->get('employees',  'EmployeeController@index');
 $router->get('machines', 'MachineController@index');
-$router->post('assign', 'WorkHistoryController@assignMachine');
-$router->post('unassign', 'WorkHistoryController@unassignMachine');
+$router->post('assign/{employeeId}/{machineId}', 'WorkHistoryController@assignMachine');
+$router->post('unassign/{employeeId}/{machineId}', 'WorkHistoryController@unassignMachine');
 $router->get('employee/info/{id}', 'EmployeeController@info');
 $router->get('machine/info/{id}', 'MachineController@info');
 $router->get('employee/history/{id}', 'EmployeeController@history');

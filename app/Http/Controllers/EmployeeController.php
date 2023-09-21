@@ -10,7 +10,7 @@ class EmployeeController extends Controller
 {
     public function index()
     {
-        return Employee::paginate(10);
+        return Employee::all();
     }
 
     public function info($id)
