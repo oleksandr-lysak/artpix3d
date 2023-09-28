@@ -44,7 +44,7 @@ There are machines
 * 78 
 * 102
 
-It is necessary to implement a REST API that will provide the following opportunities:
+**It is necessary to implement a REST API that will provide the following opportunities:**
 * Get a list of employees
 * Get a list of machines
 * To say that such and such a worker now began to work at such and such a machine. That. temporarily tie the worker to the machine. Implement the restriction that only one worker can work on the machine at the same time. But one worker can simultaneously work on several machines.
@@ -57,5 +57,3 @@ It is necessary to implement a REST API that will provide the following opportun
 Technology requirements:
 * Laravel or Lumen PHP framework
 * DBMS MySQL
-
-Provide the code via GitHub or Bitbucket
