@@ -26,7 +26,7 @@ GET http://127.0.0.1:8000/machine/history/{machineId} - Get a story on the machi
 ## TASK
 Create an application that will store and provide information about what machine the employee is working on or previously worked on.
 
-** Initial data:
+** Initial data: **
 There are employees:
 * Andrey
 * Sergey
