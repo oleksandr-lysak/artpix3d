@@ -5,28 +5,20 @@
 3. php artisan db:seed --class=MachinesTableSeeder
 4. php artisan db:seed --class=WorkHistorySeeder
 
-
 GET http://127.0.0.1:8000/employees - get list of emloyees
-
 GET http://127.0.0.1:8000/machines - get list of machines
-
 POST http://127.0.0.1:8000/assign/{employeeId}/{machineId} - Assign an employee to the machine.
-
 POST http://127.0.0.1:8000/unassign/{employeeId}/{machineId} - The employee finished work at the machine.
-
 GET http://127.0.0.1:8000/employee/info/{employeeId} - Get current information on the employee. That is, what machines is he working on now.
-
 GET http://127.0.0.1:8000/machine/info/{machineId} - Get current information on the machine. That is, what employee is working at the machine now.
-
 GET http://127.0.0.1:8000/employee/history/{employeeId} - Get the history of the employee. When did the worker start and finish work and on which machine. 
-
 GET http://127.0.0.1:8000/machine/history/{machineId} - Get a story on the machine. When and what kind of employee started and finished working on the machine.
 
 
 ## TASK
 Create an application that will store and provide information about what machine the employee is working on or previously worked on.
 
-** Initial data: **
+**Initial data:**
 There are employees:
 * Andrey
 * Sergey
