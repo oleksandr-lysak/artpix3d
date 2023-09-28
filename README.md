@@ -28,15 +28,15 @@ Create an application that will store and provide information about what machine
 **Initial data:**
 
 There are employees:
-* Andrey
-* Sergey
-* Mikhail
+* Andriy
+* Sergiy
+* Mykhailo
 * Stas
 * Artem
-* Tatiana
-* Yevgeny
-* Katya
-* Boris
+* Tetiana
+* Yevgen
+* Kateryna
+* Borys
 There are machines
 * 44
 * 56
