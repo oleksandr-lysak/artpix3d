@@ -14,15 +14,14 @@ class EmployeesTableSeeder extends Seeder
     public function run(): void
     {
         $employees = [
-            'Андрій',
-            'Сергій',
-            'Михайло',
-            'Стас',
-            'Артем',
-            'Тетяна',
-            'Євген',
-            'Катя',
-            'Борис',
+            'Andriy',
+            'Sergiy',
+            'Mykhailo',
+            'Stas',
+            'Artem', 'Tetiana',
+            'Yevgen',
+            'Kateryna',
+            'Borys'
         ];
 
         foreach ($employees as $employeeName) {
