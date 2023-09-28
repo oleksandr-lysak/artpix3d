@@ -20,11 +20,24 @@ $router->get('/', function () use ($router) {
 });
 
 
-$router->get('employees',  'EmployeeController@index');
-$router->get('machines', 'MachineController@index');
-$router->post('assign/{employeeId}/{machineId}', 'WorkHistoryController@assignMachine');
-$router->post('unassign/{employeeId}/{machineId}', 'WorkHistoryController@unassignMachine');
-$router->get('employee/info/{id}', 'EmployeeController@info');
-$router->get('machine/info/{id}', 'MachineController@info');
-$router->get('employee/history/{id}', 'EmployeeController@history');
-$router->get('machine/history/{id}', 'MachineController@history');
+Route::group(function () {
+    Route::get('employees',  'EmployeeController@index');
+    Route::get('employee/info/{id}', 'EmployeeController@info');
+    Route::get('employee/history/{id}', 'EmployeeController@history');
+});
+
+Route::group(function () {
+    Route::get('machines', 'MachineController@index');
+    Route::get('machine/info/{id}', 'MachineController@info');
+    Route::get('machine/history/{id}', 'MachineController@history');
+});
+
+Route::group(function () {
+    Route::post('assign/{employeeId}/{machineId}', 'WorkHistoryController@assignMachine');
+    Route::post('unassign/{employeeId}/{machineId}', 'WorkHistoryController@unassignMachine');
+});
+
+
+
+
+

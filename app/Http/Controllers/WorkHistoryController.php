@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Models\WorkHistory;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
+
 
 class WorkHistoryController extends Controller
 {
@@ -19,9 +18,9 @@ class WorkHistoryController extends Controller
             return response()->json([
                 'success' => false,
                 'error' => [
-                    'message' => 'The employee was not found'
-                    ]
-                ], 400);
+                    'message' => 'The machine is not free'
+                ]
+            ], 400);
         }
 
         $workHistory = new WorkHistory();
@@ -30,7 +29,12 @@ class WorkHistoryController extends Controller
         $workHistory->start_date = Carbon::now();
         $workHistory->save();
 
-        return response()->json(['success' => true, 'message' => 'The machine is assigned to the employee.'], 201);
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'message' => 'The machine is assigned to the employee.'
+            ]
+        ], 201);
     }
 
     public function unassignMachine($employeeId, $machineId)
@@ -49,6 +53,11 @@ class WorkHistoryController extends Controller
         $workHistory->end_date = Carbon::now();
         $workHistory->save();
 
-        return response()->json(['success' => true, 'message' => 'The machine is marked as free.'], 200);
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'message' => 'The machine is marked as free.'
+            ]
+        ], 200);
     }
 }
